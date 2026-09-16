@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft 365 Setup Product Key Guide: Where to Enter Your Office Key & Activate Your Subscription</title>
+  <link rel="canonical" href="https://office365acknowledge.github.io/microsoft-365-setup-product-key.html">
+
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#657089;
+      --primary:#5b4cf0;
+      --primary-dark:#4638d4;
+      --soft:#f5f3ff;
+      --line:#e7e9f2;
+      --white:#ffffff;
+      --bg:#fafbfe;
+      --shadow:0 18px 50px rgba(23,32,51,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.75;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .nav-shell{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,251,254,.94);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:-.5px;
+    }
+
+    .logo-mark{
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      border-radius:10px;
+      background:var(--primary);
+      color:white;
+      font-weight:800;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    .hero{
+      padding:72px 0 48px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(91,76,240,.11),transparent 30%),
+        radial-gradient(circle at 85% 30%,rgba(112,91,255,.08),transparent 28%);
+    }
+
+    .crumb{
+      color:var(--primary);
+      font-size:13px;
+      font-weight:750;
+      margin-bottom:18px;
+    }
+
+    h1{
+      max-width:850px;
+      margin:0 0 20px;
+      font-size:clamp(36px,5vw,58px);
+      line-height:1.08;
+      letter-spacing:-2.2px;
+    }
+
+    .hero-text{
+      max-width:760px;
+      color:var(--muted);
+      font-size:18px;
+      margin:0;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:26px;
+    }
+
+    .tag{
+      padding:7px 12px;
+      border:1px solid #dddafc;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .article-area{
+      padding:35px 0 80px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 310px;
+      gap:32px;
+      align-items:start;
+    }
+
+    article,
+    .side-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    article{
+      padding:42px;
+    }
+
+    article h2{
+      margin:35px 0 12px;
+      font-size:28px;
+      line-height:1.25;
+      letter-spacing:-.7px;
+    }
+
+    article h2:first-child{
+      margin-top:0;
+    }
+
+    article h3{
+      margin:25px 0 8px;
+      font-size:20px;
+    }
+
+    article p{
+      margin:0 0 17px;
+      color:#3f4b62;
+    }
+
+    article ul,
+    article ol{
+      color:#3f4b62;
+      padding-left:24px;
+      margin-top:8px;
+    }
+
+    article li{
+      margin-bottom:10px;
+    }
+
+    article a{
+      color:var(--primary-dark);
+      font-weight:700;
+    }
+
+    .note{
+      margin:25px 0;
+      padding:20px 22px;
+      background:var(--soft);
+      border-left:4px solid var(--primary);
+      border-radius:14px;
+      color:#404864;
+    }
+
+    .side{
+      position:sticky;
+      top:100px;
+    }
+
+    .side-card{
+      padding:25px;
+      margin-bottom:18px;
+    }
+
+    .side-card h3{
+      margin:0 0 14px;
+      font-size:18px;
+    }
+
+    .side-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .side-links{
+      display:grid;
+      gap:11px;
+    }
+
+    .side-links a{
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      color:#39445b;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .side-links a:hover{
+      border-color:#c9c3ff;
+      background:var(--soft);
+      color:var(--primary-dark);
+    }
+
+    .related{
+      padding:10px 0 80px;
+    }
+
+    .related h2{
+      font-size:30px;
+      margin:0 0 20px;
+      letter-spacing:-1px;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .related-card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:23px;
+      transition:.2s ease;
+    }
+
+    .related-card:hover{
+      transform:translateY(-3px);
+      box-shadow:var(--shadow);
+    }
+
+    .related-card span{
+      display:block;
+      color:var(--primary);
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    .related-card h3{
+      margin:0;
+      font-size:18px;
+      line-height:1.4;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:white;
+      padding:35px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .footer-brand{
+      color:var(--ink);
+      font-weight:800;
+      font-size:17px;
+    }
+
+    @media(max-width:850px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .side{
+        position:static;
+      }
+
+      .related-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+    @media(max-width:600px){
+      .wrap{
+        width:min(100% - 26px,1120px);
+      }
+
+      .hero{
+        padding:48px 0 35px;
+      }
+
+      article{
+        padding:27px 21px;
+      }
+
+      h1{
+        letter-spacing:-1.4px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav-shell">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">?</span>
+        <span>Helpcentre</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Guides</a>
+        <a href="index.html#quick-help">Quick Help</a>
+        <a href="index.html#setup-path">Setup Path</a>
+        <a href="index.html#guides">Browse Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="crumb">Setup Guide · Product Key & Activation</div>
+
+        <h1>Microsoft 365 Setup Product Key Guide: Where to Enter Your Office Key & Activate Your Subscription</h1>
+
+        <p class="hero-text">
+          Bought a Microsoft 365 subscription or received a product key and are not sure what to do next?
+          This guide explains where to enter your key, how to connect it to your account, and how to continue
+          with installation and activation without getting stuck between different setup pages.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Microsoft 365 setup product key</span>
+          <span class="tag">Product key activation</span>
+          <span class="tag">Account sign-in</span>
+          <span class="tag">Installation help</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-area">
+      <div class="wrap grid">
+
+        <article>
+
+          <h2>What Is a Microsoft 365 Setup Product Key?</h2>
+
+          <p>
+            A Microsoft 365 setup product key is a 25-character code that may be supplied with certain
+            purchases or offers. It can be used to associate an eligible purchase with a Microsoft account
+            before you download and install the applications. The exact process depends on what you purchased,
+            so the most important first step is identifying whether you have a subscription, a one-time
+            purchase, or a key that still needs to be redeemed.
+          </p>
+
+          <p>
+            Many people search for a <strong>Microsoft office product key</strong> because they see a request
+            for a code during setup. However, the key is generally not something you repeatedly enter every
+            time you open an application. Once an eligible product has been redeemed and associated with your
+            Microsoft account, your account normally becomes the important part of managing the installation.
+          </p>
+
+          <div class="note">
+            <strong>Quick tip:</strong> Keep your product key and Microsoft account information private.
+            Avoid posting a full key in screenshots, forums, comments, or public support requests.
+          </div>
+
+          <h2>Where to Enter Your Office Product Key</h2>
+
+          <p>
+            If you have a new product key that has not yet been redeemed, the setup process normally begins
+            with Microsoft's official redemption or setup flow. Sign in with the Microsoft account you want
+            associated with the purchase, then follow the instructions for entering the 25-character code.
+          </p>
+
+          <p>
+            This is the step people often describe as <strong>Where to enter your Office product key</strong>.
+            The key should be entered only on a legitimate Microsoft page or through the official activation
+            process supplied with your purchase. Be cautious of websites that ask you to send your complete
+            key to a person or claim they can activate it for you remotely.
+          </p>
+
+          <h2>How to Set Up Microsoft 365 With a Product Key</h2>
+
+          <ol>
+            <li>Have your product key available before starting.</li>
+            <li>Sign in using the Microsoft account you want to use with the purchase.</li>
+            <li>Enter the product key when the official setup process requests it.</li>
+            <li>Confirm that the product or subscription is associated with the correct account.</li>
+            <li>Continue to your account page and locate the installation option.</li>
+            <li>Download the appropriate Microsoft 365 applications for your PC or Mac.</li>
+            <li>Install the applications and sign in using the same account.</li>
+          </ol>
+
+          <p>
+            This basic sequence covers what many users mean when searching for
+            <strong>Setting up Microsoft 365 with a product key</strong>. If your purchase is already connected
+            to your account, you may not need to enter the key again. Instead, signing in to the account
+            associated with the purchase can be enough to access the available installation.
+          </p>
+
+          <h2>Microsoft 365 Product Key Activation Explained</h2>
+
+          <p>
+            <strong>Microsoft 365 product key activation</strong> is easier to understand when you separate
+            redemption from application activation. A product key can be used to redeem or associate an
+            eligible purchase. After that, your Microsoft account can be used to manage the product and
+            install the applications.
+          </p>
+
+          <p>
+            If you already redeemed your purchase, repeatedly searching for another key can make the process
+            more confusing. Instead, check your account and verify that the subscription or purchased product
+            appears there. Then install the applications and sign in with that same account.
+          </p>
+
+          <h2>How to Activate Microsoft 365 With Product Key</h2>
+
+          <p>
+            If you are wondering, <strong>How do I activate my Microsoft office subscription</strong>, start
+            by determining whether your purchase is already linked to your account. If it is, install the
+            applications and sign in. If you have an unused key, redeem it first through the official setup
+            process.
+          </p>
+
+          <p>
+            After installation, open an application such as Word or Excel and sign in with the account used
+            during setup. The application can then check the account's licensing information. This is why using
+            the correct Microsoft account is important.
+          </p>
+
+          <h2>What If You Cannot Find Your Product Key?</h2>
+
+          <p>
+            If you purchased a digital subscription directly through an account, you may not have received a
+            traditional product key at all. Your purchase may instead be connected directly to your account.
+            In that situation, looking for a 25-character code may not be necessary.
+          </p>
+
+          <p>
+            If you purchased a boxed product, card, or qualifying third-party purchase, check the packaging,
+            confirmation email, receipt, or documentation supplied with the purchase. Never assume that a
+            random key found online belongs to your purchase.
+          </p>
+
+          <h2>What About a “Microsoft World Product Key”?</h2>
+
+          <p>
+            Some users search for a <strong>Microsoft world product key</strong> when they actually mean a
+            <strong>Microsoft Word product key</strong>. Word is one of the applications included with many
+            Microsoft 365 plans and certain one-time Office purchases.
+          </p>
+
+          <p>
+            There usually isn't a separate “Word-only” key when Word is included as part of a qualifying
+            Microsoft 365 subscription. The licensing relationship is generally handled through the product
+            purchase and associated Microsoft account.
+          </p>
+
+          <h2>Already Installed but Still Seeing an Activation Message?</h2>
+
+          <p>
+            If the applications are installed but activation is not recognized, first check the account
+            currently signed in. It is easy to install an application while signed into one Microsoft account
+            and later try to activate it using another.
+          </p>
+
+          <p>
+            If you recently reinstalled the applications, you can also follow our guide on
+            <a href="reinstall-microsoft-365-already-purchased.html">reinstalling Microsoft 365 already purchased</a>.
+            It covers the account, installation, and activation steps that commonly follow a reinstall.
+          </p>
+
+          <h2>Product Key Setup Problems to Check</h2>
+
+          <ul>
+            <li><strong>Wrong account:</strong> Make sure you are using the account connected to the purchase.</li>
+            <li><strong>Already redeemed key:</strong> A redeemed key may already be attached to an account.</li>
+            <li><strong>Typing errors:</strong> Carefully check characters when entering a physical or digital key.</li>
+            <li><strong>Unsupported product:</strong> Not every key is interchangeable between products or editions.</li>
+            <li><strong>Unofficial setup site:</strong> Avoid entering your account credentials or product key on suspicious websites.</li>
+          </ul>
+
+          <h2>Continue With Installation</h2>
+
+          <p>
+            Once your purchase is connected to the correct account, the next stage is straightforward:
+            download the applications, install them, and sign in. If you have already completed the key step,
+            you generally do not need to repeat it simply because you are installing the applications on your
+            computer.
+          </p>
+
+          <p>
+            For a more detailed installation walkthrough, see
+            <a href="install-microsoft-365-already-purchased.html">Install Microsoft 365 Already Purchased</a>.
+            If you are installing on a PC or Mac, our
+            <a href="install-microsoft-365-pc-or-mac.html">PC or Mac installation guide</a>
+            can help you continue from the setup stage.
+          </p>
+
+          <p>
+            The goal is to keep the process simple: <strong>redeem the key if you have an unused key,
+            connect the purchase to the right account, install the applications, and sign in.</strong>
+            Once those pieces match, most setup problems become much easier to identify.
+          </p>
+
+        </article>
+
+        <aside class="side">
+
+          <div class="side-card">
+            <h3>On this page</h3>
+            <div class="side-links">
+              <a href="#top">Product key basics</a>
+              <a href="#top">Where to enter your key</a>
+              <a href="#top">Product key activation</a>
+              <a href="#top">Activation problems</a>
+            </div>
+          </div>
+
+          <div class="side-card">
+            <h3>Need the next step?</h3>
+            <p>
+              If your key is already redeemed, move directly to installation and account sign-in.
+            </p>
+          </div>
+
+          <div class="side-card">
+            <h3>Related guides</h3>
+            <div class="side-links">
+              <a href="just-purchased-microsoft-365-install-activate-sign-in.html">
+                Just Purchased Microsoft 365
+              </a>
+              <a href="install-microsoft-365-already-purchased.html">
+                Install Already Purchased
+              </a>
+              <a href="microsoft-office-product-key-stuck.html">
+                Product Key Got You Stuck?
+              </a>
+              <a href="reinstall-microsoft-365-already-purchased.html">
+                Reinstall Microsoft 365
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="wrap">
+        <h2>Keep Exploring</h2>
+
+        <div class="related-grid">
+
+          <a class="related-card" href="microsoft-office-product-key-stuck.html">
+            <span>Guide 06</span>
+            <h3>Microsoft Office Product Key Got You Stuck?</h3>
+          </a>
+
+          <a class="related-card" href="install-microsoft-365-pc-or-mac.html">
+            <span>Guide 04</span>
+            <h3>Install Microsoft 365 on PC or Mac</h3>
+          </a>
+
+          <a class="related-card" href="reinstall-microsoft-365-already-purchased.html">
+            <span>Guide 05</span>
+            <h3>Reinstall Microsoft 365 Already Purchased</h3>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-brand">Helpcentre</div>
+        <div>Independent setup guides written to make software setup easier to follow.</div>
+      </div>
+
+      <div>© 2026 · Setup Guides</div>
+    </div>
+  </footer>
+
+</body>
+</html>
