@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>From Product Key to Productivity: How to Install Microsoft 365 Already Purchased on PC or Mac</title>
+  <link rel="canonical" href="https://office365acknowledge.github.io/install-microsoft-365-pc-or-mac.html">
+
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#657089;
+      --primary:#5b4cf0;
+      --primary-dark:#4638d4;
+      --soft:#f5f3ff;
+      --line:#e7e9f2;
+      --white:#ffffff;
+      --bg:#fafbfe;
+      --shadow:0 18px 50px rgba(23,32,51,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.75;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .nav-shell{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,251,254,.94);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:-.5px;
+    }
+
+    .logo-mark{
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      border-radius:10px;
+      background:var(--primary);
+      color:white;
+      font-weight:800;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    .hero{
+      padding:72px 0 48px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(91,76,240,.11),transparent 30%),
+        radial-gradient(circle at 85% 30%,rgba(112,91,255,.08),transparent 28%);
+    }
+
+    .crumb{
+      color:var(--primary);
+      font-size:13px;
+      font-weight:750;
+      margin-bottom:18px;
+    }
+
+    h1{
+      max-width:900px;
+      margin:0 0 20px;
+      font-size:clamp(36px,5vw,58px);
+      line-height:1.08;
+      letter-spacing:-2.2px;
+    }
+
+    .hero-text{
+      max-width:780px;
+      color:var(--muted);
+      font-size:18px;
+      margin:0;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:26px;
+    }
+
+    .tag{
+      padding:7px 12px;
+      border:1px solid #dddafc;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .article-area{
+      padding:35px 0 80px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 310px;
+      gap:32px;
+      align-items:start;
+    }
+
+    article,
+    .side-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    article{
+      padding:42px;
+    }
+
+    article h2{
+      margin:35px 0 12px;
+      font-size:28px;
+      line-height:1.25;
+      letter-spacing:-.7px;
+    }
+
+    article h2:first-child{
+      margin-top:0;
+    }
+
+    article h3{
+      margin:25px 0 8px;
+      font-size:20px;
+    }
+
+    article p{
+      margin:0 0 17px;
+      color:#3f4b62;
+    }
+
+    article ul,
+    article ol{
+      color:#3f4b62;
+      padding-left:24px;
+      margin-top:8px;
+    }
+
+    article li{
+      margin-bottom:10px;
+    }
+
+    article a{
+      color:var(--primary-dark);
+      font-weight:700;
+    }
+
+    .note{
+      margin:25px 0;
+      padding:20px 22px;
+      background:var(--soft);
+      border-left:4px solid var(--primary);
+      border-radius:14px;
+      color:#404864;
+    }
+
+    .steps{
+      display:grid;
+      gap:12px;
+      margin:22px 0 28px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:14px;
+      align-items:start;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:15px;
+      background:#fff;
+    }
+
+    .step-number{
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:11px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      font-weight:800;
+    }
+
+    .step strong{
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .step span{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .side{
+      position:sticky;
+      top:100px;
+    }
+
+    .side-card{
+      padding:25px;
+      margin-bottom:18px;
+    }
+
+    .side-card h3{
+      margin:0 0 14px;
+      font-size:18px;
+    }
+
+    .side-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .side-links{
+      display:grid;
+      gap:11px;
+    }
+
+    .side-links a{
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      color:#39445b;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .side-links a:hover{
+      border-color:#c9c3ff;
+      background:var(--soft);
+      color:var(--primary-dark);
+    }
+
+    .related{
+      padding:10px 0 80px;
+    }
+
+    .related h2{
+      font-size:30px;
+      margin:0 0 20px;
+      letter-spacing:-1px;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .related-card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:23px;
+      transition:.2s ease;
+    }
+
+    .related-card:hover{
+      transform:translateY(-3px);
+      box-shadow:var(--shadow);
+    }
+
+    .related-card span{
+      display:block;
+      color:var(--primary);
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    .related-card h3{
+      margin:0;
+      font-size:18px;
+      line-height:1.4;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:white;
+      padding:35px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .footer-brand{
+      color:var(--ink);
+      font-weight:800;
+      font-size:17px;
+    }
+
+    @media(max-width:850px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .side{
+        position:static;
+      }
+
+      .related-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+    @media(max-width:600px){
+      .wrap{
+        width:min(100% - 26px,1120px);
+      }
+
+      .hero{
+        padding:48px 0 35px;
+      }
+
+      article{
+        padding:27px 21px;
+      }
+
+      h1{
+        letter-spacing:-1.4px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav-shell">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">?</span>
+        <span>Helpcentre</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Guides</a>
+        <a href="index.html#quick-help">Quick Help</a>
+        <a href="index.html#setup-path">Setup Path</a>
+        <a href="index.html#guides">Browse Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="crumb">Setup Guide · PC & Mac Installation</div>
+
+        <h1>From Product Key to Productivity: How to Install Microsoft 365 Already Purchased on PC or Mac</h1>
+
+        <p class="hero-text">
+          Already purchased Microsoft 365 and ready to install it? Follow a simple path from account
+          sign-in and product-key redemption to downloading, installing, and activating the applications
+          on a Windows PC or Mac.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Install Microsoft 365</span>
+          <span class="tag">PC or Mac</span>
+          <span class="tag">Product key</span>
+          <span class="tag">Activation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-area">
+      <div class="wrap grid">
+
+        <article>
+
+          <h2>Start With the Purchase You Already Made</h2>
+
+          <p>
+            If you have already purchased Microsoft 365, the installation process usually begins with
+            the Microsoft account connected to that purchase. Depending on how you bought the product,
+            you may have redeemed a product key already, or the subscription may have been associated
+            with your account during checkout.
+          </p>
+
+          <p>
+            This distinction matters because you do not necessarily need to enter a product key every
+            time you install the applications. If your purchase is already connected to your account,
+            signing in with the correct account can be the most important step.
+          </p>
+
+          <div class="note">
+            <strong>Before you begin:</strong> Have access to the Microsoft account used for the purchase.
+            If you received a 25-character product key that has not been redeemed, keep it available as well.
+          </div>
+
+          <h2>What You Need Before Installation</h2>
+
+          <p>
+            Whether you are using Windows or macOS, preparing a few details first can make the process
+            smoother. Check that you have a stable internet connection and enough storage for the
+            applications. Close unnecessary programs before beginning the installation.
+          </p>
+
+          <ul>
+            <li>The Microsoft account associated with your purchase.</li>
+            <li>Your product key, if you have an unused key that needs to be redeemed.</li>
+            <li>A Windows PC or compatible Mac with internet access.</li>
+            <li>Your account password or another available sign-in method.</li>
+            <li>Any previous version that you intend to remove before installing a new version.</li>
+          </ul>
+
+          <h2>How to Install Microsoft 365 Already Purchased</h2>
+
+          <p>
+            If you are searching for <strong>install Microsoft 365 already purchased</strong> or
+            <strong>install office 365 already purchased</strong>, the overall process can be broken
+            into four stages: account access, download, installation, and activation.
+          </p>
+
+          <div class="steps">
+
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <strong>Sign in to your account</strong>
+                <span>Use the Microsoft account associated with your purchase.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <strong>Locate the installation option</strong>
+                <span>From your account or services area, look for the option to install your purchased applications.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <strong>Download the installer</strong>
+                <span>Choose the appropriate installation option for your computer.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div>
+                <strong>Install and sign in</strong>
+                <span>Run the installer, then open an application and sign in with the same account.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <h2>Installing on a Windows PC</h2>
+
+          <p>
+            On a Windows PC, begin by signing into the account that owns the Microsoft 365 subscription.
+            After selecting the installation option, the installer is downloaded to the computer. Open
+            the downloaded setup file and allow the installation process to continue.
+          </p>
+
+          <p>
+            The installer may take some time depending on your connection and computer. Avoid shutting
+            down the computer while installation is in progress. Once the applications are available,
+            open Word, Excel, or another included application and sign in.
+          </p>
+
+          <p>
+            If you previously installed another version, do not assume that installing a new copy will
+            automatically remove every older component. If you are dealing with an older installation,
+            our <a href="reinstall-microsoft-365-already-purchased.html">Reinstall Microsoft 365 Already Purchased</a>
+            guide explains the next steps.
+          </p>
+
+          <h2>Installing on a Mac</h2>
+
+          <p>
+            The process on a Mac follows the same general sequence: access the account associated with
+            the purchase, download the Mac installer, install the applications, and sign in.
+          </p>
+
+          <p>
+            After the download finishes, open the installer and follow the on-screen instructions.
+            Once the applications are installed, launch an application and sign in with the account
+            connected to your purchase.
+          </p>
+
+          <p>
+            If you are moving from another Mac or replacing an older installation, check whether the
+            existing applications need to be removed or updated before continuing.
+          </p>
+
+          <h2>Do You Need a Microsoft Office Product Key?</h2>
+
+          <p>
+            A <strong>Microsoft office product key</strong> may be required when you have an eligible
+            purchase that has not yet been redeemed. In that case, the key can be associated with your
+            Microsoft account through the appropriate setup process.
+          </p>
+
+          <p>
+            If the key has already been redeemed, you normally should not need to enter it again simply
+            because you are installing Microsoft 365 on another computer. Instead, sign in with the
+            account used when the key was redeemed.
+          </p>
+
+          <p>
+            For more information about product-key redemption, see our
+            <a href="microsoft-365-setup-product-key.html">Microsoft 365 setup product key guide</a>.
+            It explains where to enter an unused key and what happens after it is connected to an account.
+          </p>
+
+          <h2>How Activation Works After Installation</h2>
+
+          <p>
+            After installation, open one of the applications and sign in. The application can use your
+            account information to determine whether your purchase or subscription is available.
+          </p>
+
+          <p>
+            If you see an activation prompt, first check the account displayed in the application.
+            Using a different account from the one that owns the purchase is one of the simplest things
+            to overlook.
+          </p>
+
+          <p>
+            If you have just purchased Microsoft 365 and are unsure which account to use, our
+            <a href="just-purchased-microsoft-365-now-what.html">I Just Purchased Microsoft 365—Now What?</a>
+            guide covers the broader setup process.
+          </p>
+
+          <h2>What If Microsoft 365 Is Already Installed?</h2>
+
+          <p>
+            Sometimes the applications are already on the computer, but the user still needs to activate
+            them with the correct account. In this situation, reinstalling may not be necessary.
+          </p>
+
+          <p>
+            Open an application, check the signed-in account, and verify whether it matches the account
+            used for your purchase. If the existing installation is damaged, outdated, or behaving
+            incorrectly, a reinstall may be appropriate.
+          </p>
+
+          <h2>Common Installation Problems</h2>
+
+          <ul>
+            <li><strong>Wrong Microsoft account:</strong> The purchase may belong to another account.</li>
+            <li><strong>Product key already redeemed:</strong> Check the account instead of trying to reuse the key.</li>
+            <li><strong>Old installation:</strong> Existing applications or components may interfere with setup.</li>
+            <li><strong>Slow download:</strong> A large installation can take time on a slower connection.</li>
+            <li><strong>Activation prompt:</strong> Verify that the application is signed into the correct account.</li>
+          </ul>
+
+          <h2>From Setup to Getting Back to Work</h2>
+
+          <p>
+            The easiest way to approach an already-purchased Microsoft 365 installation is to avoid
+            treating the product key, download, installation, and activation as four unrelated problems.
+            They are connected stages of the same process.
+          </p>
+
+          <p>
+            If you have an unused key, redeem it first. If your purchase is already attached to your
+            account, move directly to downloading the applications. Then install them on your PC or Mac
+            and sign in using the account connected to the purchase.
+          </p>
+
+          <p>
+            For another perspective on the process, you can also read
+            <a href="just-purchased-microsoft-365-install-activate-sign-in.html">Just Purchased Microsoft 365? Here’s How to Install, Activate & Sign In</a>.
+            Keeping the account consistent from purchase through activation can eliminate many of the
+            common setup headaches.
+          </p>
+
+        </article>
+
+        <aside class="side">
+
+          <div class="side-card">
+            <h3>On this page</h3>
+
+            <div class="side-links">
+              <a href="#top">Before you install</a>
+              <a href="#top">Windows installation</a>
+              <a href="#top">Mac installation</a>
+              <a href="#top">Product key & activation</a>
+            </div>
+          </div>
+
+          <div class="side-card">
+            <h3>Quick checklist</h3>
+
+            <p>
+              Account ready? Product key available if needed? Internet connection working?
+              Then you can move on to the download and installation stage.
+            </p>
+          </div>
+
+          <div class="side-card">
+            <h3>Related guides</h3>
+
+            <div class="side-links">
+              <a href="microsoft-365-setup-product-key.html">
+                Microsoft 365 Setup Product Key
+              </a>
+
+              <a href="reinstall-microsoft-365-already-purchased.html">
+                Reinstall Microsoft 365
+              </a>
+
+              <a href="microsoft-office-product-key-stuck.html">
+                Product Key Help
+              </a>
+
+              <a href="microsoft-365-com-setup-login.html">
+                Microsoft 365 Setup & Login
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="related">
+
+      <div class="wrap">
+
+        <h2>Keep Exploring</h2>
+
+        <div class="related-grid">
+
+          <a class="related-card" href="microsoft-365-setup-product-key.html">
+            <span>Guide 03</span>
+            <h3>Microsoft 365 Setup Product Key Guide</h3>
+          </a>
+
+          <a class="related-card" href="reinstall-microsoft-365-already-purchased.html">
+            <span>Guide 05</span>
+            <h3>Reinstall Microsoft 365 Already Purchased</h3>
+          </a>
+
+          <a class="related-card" href="microsoft-office-product-key-stuck.html">
+            <span>Guide 06</span>
+            <h3>Microsoft Office Product Key Got You Stuck?</h3>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="wrap footer-inner">
+
+      <div>
+        <div class="footer-brand">Helpcentre</div>
+        <div>Independent setup guides written to make software setup easier to follow.</div>
+      </div>
+
+      <div>© 2026 · Setup Guides</div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
