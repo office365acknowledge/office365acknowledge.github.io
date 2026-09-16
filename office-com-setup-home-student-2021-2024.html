@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office.com/Setup Made Simple: Microsoft Office Home & Student 2021/2024 Download, Install & Activation Guide</title>
+  <link rel="canonical" href="https://office365acknowledge.github.io/office-com-setup-home-student-2021-2024.html">
+
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#657089;
+      --primary:#5b4cf0;
+      --primary-dark:#4638d4;
+      --soft:#f5f3ff;
+      --line:#e7e9f2;
+      --white:#ffffff;
+      --bg:#fafbfe;
+      --shadow:0 18px 50px rgba(23,32,51,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.75;
+    }
+
+    a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .nav-shell{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,251,254,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(231,233,242,.9);
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--ink);
+      font-weight:800;
+      font-size:19px;
+      letter-spacing:-.02em;
+    }
+
+    .logo:hover{
+      text-decoration:none;
+    }
+
+    .logo-mark{
+      width:34px;
+      height:34px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:var(--primary);
+      font-weight:800;
+      box-shadow:0 8px 20px rgba(91,76,240,.24);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:25px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    .hero{
+      padding:75px 0 55px;
+      background:
+        radial-gradient(circle at 85% 20%,rgba(91,76,240,.10),transparent 28%),
+        radial-gradient(circle at 10% 30%,rgba(91,76,240,.07),transparent 25%);
+    }
+
+    .crumb{
+      font-size:13px;
+      font-weight:800;
+      color:var(--primary);
+      margin-bottom:18px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    h1{
+      max-width:900px;
+      margin:0 0 20px;
+      font-size:clamp(36px,5vw,62px);
+      line-height:1.08;
+      letter-spacing:-.045em;
+    }
+
+    .hero-text{
+      max-width:790px;
+      margin:0;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:25px;
+    }
+
+    .tag{
+      padding:7px 12px;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      border:1px solid #e4e0ff;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .content{
+      padding:35px 0 75px;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 310px;
+      gap:34px;
+      align-items:start;
+    }
+
+    article,
+    .sidebar-card,
+    .related{
+      background:var(--white);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+    }
+
+    article{
+      padding:42px;
+    }
+
+    article h2{
+      margin:38px 0 13px;
+      font-size:27px;
+      line-height:1.25;
+      letter-spacing:-.025em;
+    }
+
+    article h2:first-child{
+      margin-top:0;
+    }
+
+    article h3{
+      margin:27px 0 10px;
+      font-size:20px;
+    }
+
+    article p{
+      margin:0 0 17px;
+    }
+
+    article ul,
+    article ol{
+      padding-left:23px;
+    }
+
+    article li{
+      margin:9px 0;
+    }
+
+    .note{
+      margin:25px 0;
+      padding:20px 22px;
+      border-left:4px solid var(--primary);
+      background:var(--soft);
+      border-radius:14px;
+    }
+
+    .note strong{
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .steps{
+      counter-reset:step;
+      list-style:none;
+      padding:0;
+      margin:20px 0;
+    }
+
+    .steps li{
+      counter-increment:step;
+      position:relative;
+      padding:18px 18px 18px 62px;
+      margin:12px 0;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+    }
+
+    .steps li::before{
+      content:counter(step);
+      position:absolute;
+      left:17px;
+      top:16px;
+      width:32px;
+      height:32px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:var(--primary);
+      font-weight:800;
+    }
+
+    .sidebar{
+      position:sticky;
+      top:100px;
+      display:grid;
+      gap:18px;
+    }
+
+    .sidebar-card{
+      padding:24px;
+      box-shadow:none;
+    }
+
+    .sidebar-card h3{
+      margin:0 0 13px;
+      font-size:18px;
+    }
+
+    .sidebar-card ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .sidebar-card li{
+      padding:10px 0;
+      border-bottom:1px solid var(--line);
+      font-size:14px;
+    }
+
+    .sidebar-card li:last-child{
+      border-bottom:0;
+    }
+
+    .sidebar-card a{
+      font-weight:700;
+    }
+
+    .related{
+      margin-top:25px;
+      padding:25px;
+      box-shadow:none;
+    }
+
+    .related h3{
+      margin:0 0 14px;
+      font-size:18px;
+    }
+
+    .related-link{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      font-weight:750;
+    }
+
+    .related-link:last-child{
+      border-bottom:0;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:38px 0;
+      background:#fff;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:25px;
+      align-items:center;
+    }
+
+    .footer-brand{
+      font-weight:800;
+      font-size:18px;
+    }
+
+    .footer-copy{
+      max-width:520px;
+      color:var(--muted);
+      font-size:14px;
+      text-align:right;
+    }
+
+    @media(max-width:850px){
+      .layout{
+        grid-template-columns:1fr;
+      }
+
+      .sidebar{
+        position:static;
+      }
+
+      .nav-links{
+        gap:13px;
+      }
+
+      article{
+        padding:30px;
+      }
+    }
+
+    @media(max-width:600px){
+      .wrap{
+        width:min(100% - 26px,1120px);
+      }
+
+      .nav{
+        min-height:68px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding:50px 0 38px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .hero-text{
+        font-size:16px;
+      }
+
+      article{
+        padding:24px 20px;
+        border-radius:18px;
+      }
+
+      article h2{
+        font-size:24px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-copy{
+        text-align:left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav-shell">
+    <div class="wrap nav">
+      <a class="logo" href="https://office365acknowledge.github.io/">
+        <span class="logo-mark">?</span>
+        <span>Helpcentre</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="https://office365acknowledge.github.io/#guides">Guides</a>
+        <a href="https://office365acknowledge.github.io/#quick-help">Quick Help</a>
+        <a href="https://office365acknowledge.github.io/#setup-path">Setup Path</a>
+        <a href="https://office365acknowledge.github.io/#guides">Browse Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="crumb">Guide 07 · Download & Activation</div>
+
+      <h1>Office.com/Setup Made Simple: Microsoft Office Home & Student 2021/2024 Download, Install & Activation Guide</h1>
+
+      <p class="hero-text">
+        Purchased a one-time copy of Microsoft Office Home & Student and not sure what to do next?
+        This guide explains how to use your product key, sign in to your account, download the
+        software, install it on a PC or Mac, and complete activation without getting lost in the setup process.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Home & Student 2021</span>
+        <span class="tag">Home & Student 2024</span>
+        <span class="tag">Product Key</span>
+        <span class="tag">Download & Install</span>
+        <span class="tag">Activation</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="wrap layout">
+
+      <article>
+
+        <h2>What Is Microsoft Office Home & Student?</h2>
+
+        <p>
+          Microsoft Office Home & Student is a one-time-purchase edition designed for people who need
+          familiar productivity applications without setting up a recurring subscription. Depending on
+          the version you purchased, the package can include applications such as Word, Excel, and PowerPoint.
+        </p>
+
+        <p>
+          If you are searching for <strong>office.com/setup home & student 2024</strong> or
+          <strong>office.com/setup home & student 2021</strong>, the important part is understanding that
+          the setup process connects your purchase, product key, Microsoft account, download, installation,
+          and activation. Completing these steps in the right order can make the process much easier.
+        </p>
+
+        <h2>Home & Student 2021 vs. Home & Student 2024</h2>
+
+        <p>
+          The 2021 and 2024 editions are separate product versions. If you purchased one of them,
+          use the product information associated with that specific purchase rather than assuming that
+          a key for one version can activate another version.
+        </p>
+
+        <p>
+          A useful way to think about the two products is simple: the edition you purchased determines
+          which installation and activation entitlement you have. Before downloading anything, check your
+          purchase confirmation, product packaging, or Microsoft account to identify the exact version.
+        </p>
+
+        <div class="note">
+          <strong>Important:</strong>
+          Home & Student is different from Microsoft 365. A one-time purchase and a Microsoft 365
+          subscription can have different licensing and activation arrangements, so verify which product
+          you actually purchased before starting setup.
+        </div>
+
+        <h2>Before You Start the Setup</h2>
+
+        <p>
+          A few minutes of preparation can prevent many common installation problems. Have the following
+          information available:
+        </p>
+
+        <ul>
+          <li>Your Microsoft account email address and password.</li>
+          <li>Your Office product key if the purchase supplied one.</li>
+          <li>Your purchase confirmation or product packaging.</li>
+          <li>A stable internet connection for downloading the installation files.</li>
+          <li>A compatible Windows PC or Mac with enough available storage.</li>
+        </ul>
+
+        <p>
+          If you purchased the software digitally and the purchase has already been connected to your
+          Microsoft account, you may not need to repeatedly enter the key. In that situation, signing in
+          to the account associated with the purchase can be the important part of the setup.
+        </p>
+
+        <h2>Where to Enter Your Microsoft Office Product Key</h2>
+
+        <p>
+          If your purchase includes a product key, you may need to redeem it before downloading the
+          software. Users often search for phrases such as <strong>enter product key Microsoft Office</strong>
+          or <strong>Microsoft Office product key</strong> when they reach this stage.
+        </p>
+
+        <p>
+          A product key is normally a multi-character code supplied with an eligible purchase. Enter it
+          carefully and make sure you are signed in with the Microsoft account you intend to associate
+          with the purchase.
+        </p>
+
+        <p>
+          Some users also search for a <strong>Microsoft Word product key</strong> specifically. Word is
+          an application included with certain Office editions, but the activation entitlement generally
+          relates to the purchased Office product rather than a separate key for Word itself.
+        </p>
+
+        <h2>How to Download Home & Student</h2>
+
+        <p>
+          Once your purchase is associated with the correct account, the next step is to access the
+          installation option for your product. If you are looking for a <strong>Microsoft Office Home
+          2024 download</strong>, first verify that your account or purchase corresponds to the 2024 edition.
+        </p>
+
+        <ol class="steps">
+          <li>
+            <strong>Sign in to your Microsoft account.</strong>
+            Use the same account connected to your Office purchase or product-key redemption.
+          </li>
+
+          <li>
+            <strong>Locate your purchased product.</strong>
+            Check your account's services, subscriptions, or product area for the applicable Office edition.
+          </li>
+
+          <li>
+            <strong>Choose the installation option.</strong>
+            Select the available download or install control associated with your purchased product.
+          </li>
+
+          <li>
+            <strong>Run the downloaded installer.</strong>
+            On Windows, open the installation file and follow the prompts. On Mac, open the downloaded
+            installer and continue through the installation process.
+          </li>
+
+          <li>
+            <strong>Open an Office application.</strong>
+            After installation, launch Word, Excel, or PowerPoint and follow the activation prompts.
+          </li>
+        </ol>
+
+        <h2>How Activation Works After Installation</h2>
+
+        <p>
+          Installation and activation are related but separate steps. Installing the applications places
+          the software on your computer; activation confirms that the installed product is associated with
+          a valid purchase or license.
+        </p>
+
+        <p>
+          If you have already redeemed your product key, signing in with the correct Microsoft account
+          may be enough to complete activation. If you have not redeemed the key yet, follow the product's
+          redemption instructions first.
+        </p>
+
+        <p>
+          This is also why searching for <strong>Microsoft 365 setup product key</strong> can sometimes cause
+          confusion. Microsoft 365 is subscription-based, while Home & Student editions are commonly
+          purchased as one-time licenses. Always follow the setup path that matches the product shown in
+          your purchase information.
+        </p>
+
+        <h2>What If You Purchased Home & Business Instead?</h2>
+
+        <p>
+          Home & Student and Home & Business are different editions. If your purchase says Home & Business,
+          do not use a Home & Student guide simply because the installation process looks similar.
+        </p>
+
+        <p>
+          Searches for <strong>office.com/setup home business 2024</strong> often come from users who have
+          purchased the Home & Business edition. Check the exact product name before entering a key or
+          downloading an installer so that the account and license information match your purchase.
+        </p>
+
+        <h2>Common Setup Problems and Simple Checks</h2>
+
+        <h3>The product key is rejected</h3>
+
+        <p>
+          Recheck every character and make sure you are entering the key in the correct redemption area.
+          If the key has already been redeemed, trying to redeem it again may not be necessary. Instead,
+          sign in with the Microsoft account originally used for the redemption.
+        </p>
+
+        <h3>The wrong version appears</h3>
+
+        <p>
+          Confirm whether you purchased 2021 or 2024. Also verify that you are signed in to the correct
+          Microsoft account. A different account can make a legitimate purchase appear to be missing.
+        </p>
+
+        <h3>Activation does not complete</h3>
+
+        <p>
+          Check your internet connection, restart the Office application, and sign out and back in if the
+          application is using the wrong account. If another older installation is present, it can also be
+          worth checking for conflicting or duplicate installations.
+        </p>
+
+        <h3>You need to reinstall later</h3>
+
+        <p>
+          Keep access to the Microsoft account associated with your purchase. If you need to
+          <a href="https://office365acknowledge.github.io/reinstall-microsoft-365-already-purchased.html">
+            reinstall a previously purchased installation
+          </a>,
+          account access can be especially important because the original purchase may already be linked
+          to that account.
+        </p>
+
+        <h2>Home & Student Setup Checklist</h2>
+
+        <ul>
+          <li>Confirm whether you purchased the 2021 or 2024 edition.</li>
+          <li>Identify the Microsoft account connected to the purchase.</li>
+          <li>Keep your Microsoft Office product key available if it has not yet been redeemed.</li>
+          <li>Redeem the key when required.</li>
+          <li>Download the correct installation package.</li>
+          <li>Install the applications on your PC or Mac.</li>
+          <li>Open an application and sign in with the correct account.</li>
+          <li>Confirm that activation has completed.</li>
+        </ul>
+
+        <h2>Need Help With the Next Setup Step?</h2>
+
+        <p>
+          If your main problem is entering a product key, continue with the
+          <a href="https://office365acknowledge.github.io/microsoft-365-setup-product-key.html">
+            Microsoft 365 setup product key guide
+          </a>.
+          If you are installing on a computer and want a PC-or-Mac focused walkthrough, see the
+          <a href="https://office365acknowledge.github.io/install-microsoft-365-pc-or-mac.html">
+            PC or Mac installation guide
+          </a>.
+        </p>
+
+        <p>
+          For product-key problems, the
+          <a href="https://office365acknowledge.github.io/microsoft-office-product-key-stuck.html">
+            Microsoft Office product key troubleshooting guide
+          </a>
+          covers common entry and activation issues. And if you need a broader guide covering downloading,
+          installing, or reinstalling Microsoft 365 and Office 2024, see the
+          <a href="https://office365acknowledge.github.io/download-install-reinstall-microsoft-365-office-2024.html">
+            complete Microsoft 365 and Office 2024 setup guide
+          </a>.
+        </p>
+
+        <p>
+          The key idea is to match the setup process to the exact product you purchased. Once the product
+          version, Microsoft account, product key, installation, and activation steps all line up, the
+          process becomes much more straightforward.
+        </p>
+
+      </article>
+
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+          <h3>On This Page</h3>
+          <ul>
+            <li><a href="#top">Home & Student overview</a></li>
+            <li><a href="#top">2021 vs. 2024</a></li>
+            <li><a href="#top">Product key setup</a></li>
+            <li><a href="#top">Download & install</a></li>
+            <li><a href="#top">Activation</a></li>
+            <li><a href="#top">Troubleshooting</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Related Guides</h3>
+          <a class="related-link" href="https://office365acknowledge.github.io/microsoft-365-setup-product-key.html">
+            Microsoft 365 Setup Product Key
+          </a>
+          <a class="related-link" href="https://office365acknowledge.github.io/install-microsoft-365-pc-or-mac.html">
+            Install on PC or Mac
+          </a>
+          <a class="related-link" href="https://office365acknowledge.github.io/microsoft-office-product-key-stuck.html">
+            Product Key Troubleshooting
+          </a>
+          <a class="related-link" href="https://office365acknowledge.github.io/download-install-reinstall-microsoft-365-office-2024.html">
+            Microsoft 365 & Office 2024 Guide
+          </a>
+        </div>
+
+        <div class="related">
+          <h3>Quick Setup Path</h3>
+          <p>
+            Purchase → Account → Product Key → Download → Install → Sign In → Activate
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">Helpcentre</div>
+
+      <div class="footer-copy">
+        Independent setup guides written to make software setup easier to follow.
+        © 2026
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
