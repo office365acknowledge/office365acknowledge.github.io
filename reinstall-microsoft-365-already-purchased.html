@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reinstall Microsoft 365 Already Purchased? A Simple Guide to Office Setup, Activation & Sign-In</title>
+  <link rel="canonical" href="https://office365acknowledge.github.io/reinstall-microsoft-365-already-purchased.html">
+
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#657089;
+      --primary:#5b4cf0;
+      --primary-dark:#4638d4;
+      --soft:#f5f3ff;
+      --line:#e7e9f2;
+      --white:#ffffff;
+      --bg:#fafbfe;
+      --shadow:0 18px 50px rgba(23,32,51,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.75;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .nav-shell{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,251,254,.94);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:-.5px;
+    }
+
+    .logo-mark{
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      border-radius:10px;
+      background:var(--primary);
+      color:white;
+      font-weight:800;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    .hero{
+      padding:72px 0 48px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(91,76,240,.11),transparent 30%),
+        radial-gradient(circle at 85% 30%,rgba(112,91,255,.08),transparent 28%);
+    }
+
+    .crumb{
+      color:var(--primary);
+      font-size:13px;
+      font-weight:750;
+      margin-bottom:18px;
+    }
+
+    h1{
+      max-width:900px;
+      margin:0 0 20px;
+      font-size:clamp(36px,5vw,58px);
+      line-height:1.08;
+      letter-spacing:-2.2px;
+    }
+
+    .hero-text{
+      max-width:780px;
+      color:var(--muted);
+      font-size:18px;
+      margin:0;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:26px;
+    }
+
+    .tag{
+      padding:7px 12px;
+      border:1px solid #dddafc;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .article-area{
+      padding:35px 0 80px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 310px;
+      gap:32px;
+      align-items:start;
+    }
+
+    article,
+    .side-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    article{
+      padding:42px;
+    }
+
+    article h2{
+      margin:35px 0 12px;
+      font-size:28px;
+      line-height:1.25;
+      letter-spacing:-.7px;
+    }
+
+    article h2:first-child{
+      margin-top:0;
+    }
+
+    article h3{
+      margin:25px 0 8px;
+      font-size:20px;
+    }
+
+    article p{
+      margin:0 0 17px;
+      color:#3f4b62;
+    }
+
+    article ul,
+    article ol{
+      color:#3f4b62;
+      padding-left:24px;
+      margin-top:8px;
+    }
+
+    article li{
+      margin-bottom:10px;
+    }
+
+    article a{
+      color:var(--primary-dark);
+      font-weight:700;
+    }
+
+    .note{
+      margin:25px 0;
+      padding:20px 22px;
+      background:var(--soft);
+      border-left:4px solid var(--primary);
+      border-radius:14px;
+      color:#404864;
+    }
+
+    .steps{
+      display:grid;
+      gap:12px;
+      margin:22px 0 28px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:14px;
+      align-items:start;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:15px;
+      background:#fff;
+    }
+
+    .step-number{
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:11px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      font-weight:800;
+    }
+
+    .step strong{
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .step span{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .side{
+      position:sticky;
+      top:100px;
+    }
+
+    .side-card{
+      padding:25px;
+      margin-bottom:18px;
+    }
+
+    .side-card h3{
+      margin:0 0 14px;
+      font-size:18px;
+    }
+
+    .side-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .side-links{
+      display:grid;
+      gap:11px;
+    }
+
+    .side-links a{
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      color:#39445b;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .side-links a:hover{
+      border-color:#c9c3ff;
+      background:var(--soft);
+      color:var(--primary-dark);
+    }
+
+    .related{
+      padding:10px 0 80px;
+    }
+
+    .related h2{
+      font-size:30px;
+      margin:0 0 20px;
+      letter-spacing:-1px;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .related-card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:23px;
+      transition:.2s ease;
+    }
+
+    .related-card:hover{
+      transform:translateY(-3px);
+      box-shadow:var(--shadow);
+    }
+
+    .related-card span{
+      display:block;
+      color:var(--primary);
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    .related-card h3{
+      margin:0;
+      font-size:18px;
+      line-height:1.4;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:white;
+      padding:35px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .footer-brand{
+      color:var(--ink);
+      font-weight:800;
+      font-size:17px;
+    }
+
+    @media(max-width:850px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .side{
+        position:static;
+      }
+
+      .related-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+    @media(max-width:600px){
+      .wrap{
+        width:min(100% - 26px,1120px);
+      }
+
+      .hero{
+        padding:48px 0 35px;
+      }
+
+      article{
+        padding:27px 21px;
+      }
+
+      h1{
+        letter-spacing:-1.4px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav-shell">
+    <div class="wrap nav">
+
+      <a class="logo" href="index.html">
+        <span class="logo-mark">?</span>
+        <span>Helpcentre</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Guides</a>
+        <a href="index.html#quick-help">Quick Help</a>
+        <a href="index.html#setup-path">Setup Path</a>
+        <a href="index.html#guides">Browse Guides</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+
+        <div class="crumb">Setup Guide · Reinstallation & Activation</div>
+
+        <h1>Reinstall Microsoft 365 Already Purchased? A Simple Guide to Office Setup, Activation & Sign-In</h1>
+
+        <p class="hero-text">
+          Need to reinstall Microsoft 365 after a computer reset, software problem, or accidental removal?
+          Learn how to reconnect your existing purchase, reinstall the applications, and sign in again
+          without buying another subscription or unnecessarily searching for a new product key.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Reinstall Microsoft 365</span>
+          <span class="tag">Already purchased</span>
+          <span class="tag">Activation</span>
+          <span class="tag">Sign-in</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="article-area">
+      <div class="wrap grid">
+
+        <article>
+
+          <h2>Can You Reinstall Microsoft 365 After Buying It?</h2>
+
+          <p>
+            Yes. If you already purchased an eligible Microsoft 365 subscription or one-time product,
+            you can generally reinstall the applications without purchasing the software again. The
+            important part is connecting the installation to the Microsoft account associated with
+            your purchase.
+          </p>
+
+          <p>
+            This is why searches such as <strong>Reinstall Microsoft 365 already purchased</strong> often
+            lead to questions about product keys. In many cases, an already-redeemed purchase is managed
+            through the account rather than by entering the same product key again.
+          </p>
+
+          <div class="note">
+            <strong>Important:</strong> Before reinstalling, identify the Microsoft account that owns
+            the purchase. If you are unsure which account was used, check your purchase confirmation,
+            account information, or previous sign-in details.
+          </div>
+
+          <h2>When Should You Reinstall Microsoft 365?</h2>
+
+          <p>
+            Reinstallation can be useful when the applications are damaged, repeatedly fail to start,
+            have installation problems, or need to be restored after removing them from the computer.
+            It can also be part of troubleshooting when a normal repair or update does not resolve an
+            issue.
+          </p>
+
+          <p>
+            A reinstall is not always necessary. If the applications are working normally and you only
+            see an activation prompt, first check the signed-in account. Installing everything again may
+            not solve an account or licensing problem.
+          </p>
+
+          <h2>Before You Reinstall: Check Your Account</h2>
+
+          <p>
+            Your Microsoft account is one of the most important pieces of information during
+            reinstallation. The account should be the one associated with the subscription or purchase.
+          </p>
+
+          <ol>
+            <li>Identify the Microsoft account used for your original purchase.</li>
+            <li>Make sure you can sign in to that account.</li>
+            <li>Check whether your purchase or subscription is visible in the account.</li>
+            <li>Keep your product key available only if you have an unused key that still needs redemption.</li>
+          </ol>
+
+          <p>
+            If you already redeemed a key, do not assume that reinstalling requires entering it again.
+            For a deeper explanation of product-key setup, see our
+            <a href="microsoft-365-setup-product-key.html">Microsoft 365 Setup Product Key Guide</a>.
+          </p>
+
+          <h2>How to Reinstall Microsoft 365 Already Purchased</h2>
+
+          <div class="steps">
+
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <strong>Remove the existing installation if necessary</strong>
+                <span>Uninstall the applications when troubleshooting or replacing a damaged installation.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <strong>Sign in to the account connected to your purchase</strong>
+                <span>Use the same Microsoft account associated with your subscription or product.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <strong>Choose the installation option</strong>
+                <span>Download the installer appropriate for your computer.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div>
+                <strong>Run the installer</strong>
+                <span>Follow the installation prompts and allow the process to finish.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">5</div>
+              <div>
+                <strong>Open an application and sign in</strong>
+                <span>Use the account associated with the original purchase to complete activation.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <h2>Do You Need Your Microsoft Office Product Key Again?</h2>
+
+          <p>
+            One of the most common questions during a reinstall is whether the
+            <strong>Microsoft office product key</strong> must be entered again. If your purchase has
+            already been redeemed and linked to your Microsoft account, the answer may be no.
+          </p>
+
+          <p>
+            A product key is typically important when redeeming an eligible purchase for the first time.
+            After redemption, the account associated with that purchase becomes an important part of
+            installation and activation.
+          </p>
+
+          <p>
+            If you have a new, unused key, our guide on
+            <a href="microsoft-office-product-key-stuck.html">Microsoft Office Product Key problems</a>
+            can help explain what to check before attempting another activation.
+          </p>
+
+          <h2>Reinstalling on a Windows PC</h2>
+
+          <p>
+            On Windows, begin by making sure any previous installation that is causing the problem has
+            been removed or repaired as appropriate. Then sign in to the account associated with your
+            purchase and select the available installation option.
+          </p>
+
+          <p>
+            After downloading the installer, open it and allow the installation to complete. Once the
+            applications are available, open Word, Excel, or another included application and sign in.
+          </p>
+
+          <p>
+            If activation is successful, you can continue using the applications normally. If an
+            activation message remains, check the account before attempting another reinstall.
+          </p>
+
+          <h2>Reinstalling on a Mac</h2>
+
+          <p>
+            The basic process is similar on macOS. Remove the existing installation if required, sign
+            in to the account connected to your purchase, download the Mac installer, and follow the
+            installation instructions.
+          </p>
+
+          <p>
+            Once the applications have been installed, open one and sign in. The account information
+            allows the application to check the purchase or subscription associated with your account.
+          </p>
+
+          <p>
+            If you are installing on a different computer, make sure you understand the device and
+            installation limits associated with your particular purchase or subscription.
+          </p>
+
+          <h2>What If Activation Does Not Work After Reinstalling?</h2>
+
+          <p>
+            If you reinstall Microsoft 365 but still receive an activation message, start with the
+            simplest checks. Confirm that you have an internet connection and that the application is
+            signed in with the correct Microsoft account.
+          </p>
+
+          <ul>
+            <li><strong>Check the account:</strong> Make sure it matches the account used for the purchase.</li>
+            <li><strong>Check the purchase:</strong> Confirm that the subscription or product belongs to that account.</li>
+            <li><strong>Check the installation:</strong> Make sure the installation completed successfully.</li>
+            <li><strong>Check for duplicate accounts:</strong> Signing into a different account can make an existing purchase appear missing.</li>
+            <li><strong>Do not buy another key immediately:</strong> First determine whether your existing purchase is already linked to your account.</li>
+          </ul>
+
+          <h2>Activate Microsoft 365 After Reinstalling</h2>
+
+          <p>
+            If you are wondering how to <strong>activate Office after reinstalling or installing on a
+            different device</strong>, the first thing to remember is that activation and installation
+            are connected to the purchase and account.
+          </p>
+
+          <p>
+            After reinstalling, open an included application and sign in with the account associated
+            with your purchase. If you have an unused product key, it may need to be redeemed through
+            the appropriate setup process before the purchase becomes available in your account.
+          </p>
+
+          <p>
+            For another walkthrough, visit
+            <a href="install-microsoft-365-pc-or-mac.html">Install Microsoft 365 on PC or Mac</a>.
+            That guide covers the installation process from download through sign-in.
+          </p>
+
+          <h2>Reinstall Without Starting From Scratch</h2>
+
+          <p>
+            Reinstalling a purchased product does not necessarily mean starting the entire purchasing
+            process over again. Think of it as restoring access to software you already own or
+            subscribe to.
+          </p>
+
+          <p>
+            Keep your Microsoft account consistent, determine whether your product key has already been
+            redeemed, reinstall the applications on your computer, and then sign in. These simple checks
+            can prevent many unnecessary activation loops.
+          </p>
+
+          <p>
+            If you are actually starting from a brand-new purchase rather than a reinstall, read
+            <a href="just-purchased-microsoft-365-install-activate-sign-in.html">Just Purchased Microsoft 365? Here’s How to Install, Activate & Sign In</a>
+            for a first-time setup walkthrough.
+          </p>
+
+        </article>
+
+        <aside class="side">
+
+          <div class="side-card">
+            <h3>On this page</h3>
+
+            <div class="side-links">
+              <a href="#top">Before reinstalling</a>
+              <a href="#top">Windows reinstall</a>
+              <a href="#top">Mac reinstall</a>
+              <a href="#top">Activation after reinstall</a>
+            </div>
+          </div>
+
+          <div class="side-card">
+            <h3>Quick reminder</h3>
+
+            <p>
+              If your purchase is already linked to your account, you may not need to enter the
+              original product key again.
+            </p>
+          </div>
+
+          <div class="side-card">
+            <h3>Related guides</h3>
+
+            <div class="side-links">
+              <a href="install-microsoft-365-already-purchased.html">
+                Install Already Purchased
+              </a>
+
+              <a href="microsoft-365-setup-product-key.html">
+                Setup Product Key
+              </a>
+
+              <a href="install-microsoft-365-pc-or-mac.html">
+                PC or Mac Installation
+              </a>
+
+              <a href="microsoft-365-com-setup-login.html">
+                Setup & Login Guide
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="related">
+
+      <div class="wrap">
+
+        <h2>Keep Exploring</h2>
+
+        <div class="related-grid">
+
+          <a class="related-card" href="install-microsoft-365-already-purchased.html">
+            <span>Guide 02</span>
+            <h3>Install Microsoft 365 Already Purchased</h3>
+          </a>
+
+          <a class="related-card" href="microsoft-365-setup-product-key.html">
+            <span>Guide 03</span>
+            <h3>Microsoft 365 Setup Product Key Guide</h3>
+          </a>
+
+          <a class="related-card" href="microsoft-office-product-key-stuck.html">
+            <span>Guide 06</span>
+            <h3>Microsoft Office Product Key Got You Stuck?</h3>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="wrap footer-inner">
+
+      <div>
+        <div class="footer-brand">Helpcentre</div>
+        <div>Independent setup guides written to make software setup easier to follow.</div>
+      </div>
+
+      <div>© 2026 · Setup Guides</div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
