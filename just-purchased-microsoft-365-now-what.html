@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>I Just Purchased Microsoft 365—Now What? Install, Reinstall, Activate & Sign In Step by Step</title>
+
+  <link rel="canonical" href="https://office365acknowledge.github.io/just-purchased-microsoft-365-now-what.html">
+
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#657089;
+      --primary:#5b4cf0;
+      --primary-dark:#4638d4;
+      --soft:#f5f3ff;
+      --line:#e7e9f2;
+      --white:#ffffff;
+      --bg:#fafbfe;
+      --shadow:0 18px 50px rgba(23,32,51,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.75;
+    }
+
+    a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .nav-shell{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(250,251,254,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(231,233,242,.9);
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--ink);
+      font-weight:800;
+      font-size:19px;
+      letter-spacing:-.02em;
+    }
+
+    .logo:hover{
+      text-decoration:none;
+    }
+
+    .logo-mark{
+      width:34px;
+      height:34px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:var(--primary);
+      font-weight:800;
+      box-shadow:0 8px 20px rgba(91,76,240,.24);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:25px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    .hero{
+      padding:75px 0 55px;
+      background:
+        radial-gradient(circle at 85% 20%,rgba(91,76,240,.10),transparent 28%),
+        radial-gradient(circle at 10% 30%,rgba(91,76,240,.07),transparent 25%);
+    }
+
+    .crumb{
+      font-size:13px;
+      font-weight:800;
+      color:var(--primary);
+      margin-bottom:18px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    h1{
+      max-width:900px;
+      margin:0 0 20px;
+      font-size:clamp(36px,5vw,62px);
+      line-height:1.08;
+      letter-spacing:-.045em;
+    }
+
+    .hero-text{
+      max-width:790px;
+      margin:0;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:25px;
+    }
+
+    .tag{
+      padding:7px 12px;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      border:1px solid #e4e0ff;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .content{
+      padding:35px 0 75px;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 310px;
+      gap:34px;
+      align-items:start;
+    }
+
+    article,
+    .sidebar-card,
+    .related{
+      background:var(--white);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+    }
+
+    article{
+      padding:42px;
+    }
+
+    article h2{
+      margin:38px 0 13px;
+      font-size:27px;
+      line-height:1.25;
+      letter-spacing:-.025em;
+    }
+
+    article h2:first-child{
+      margin-top:0;
+    }
+
+    article h3{
+      margin:27px 0 10px;
+      font-size:20px;
+    }
+
+    article p{
+      margin:0 0 17px;
+    }
+
+    article ul,
+    article ol{
+      padding-left:23px;
+    }
+
+    article li{
+      margin:9px 0;
+    }
+
+    .note{
+      margin:25px 0;
+      padding:20px 22px;
+      border-left:4px solid var(--primary);
+      background:var(--soft);
+      border-radius:14px;
+    }
+
+    .note strong{
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .steps{
+      counter-reset:step;
+      list-style:none;
+      padding:0;
+      margin:20px 0;
+    }
+
+    .steps li{
+      counter-increment:step;
+      position:relative;
+      padding:18px 18px 18px 62px;
+      margin:12px 0;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+    }
+
+    .steps li::before{
+      content:counter(step);
+      position:absolute;
+      left:17px;
+      top:16px;
+      width:32px;
+      height:32px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:var(--primary);
+      font-weight:800;
+    }
+
+    .sidebar{
+      position:sticky;
+      top:100px;
+      display:grid;
+      gap:18px;
+    }
+
+    .sidebar-card{
+      padding:24px;
+      box-shadow:none;
+    }
+
+    .sidebar-card h3{
+      margin:0 0 13px;
+      font-size:18px;
+    }
+
+    .sidebar-card ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .sidebar-card li{
+      padding:10px 0;
+      border-bottom:1px solid var(--line);
+      font-size:14px;
+    }
+
+    .sidebar-card li:last-child{
+      border-bottom:0;
+    }
+
+    .sidebar-card a{
+      font-weight:700;
+    }
+
+    .related{
+      margin-top:25px;
+      padding:25px;
+      box-shadow:none;
+    }
+
+    .related h3{
+      margin:0 0 14px;
+      font-size:18px;
+    }
+
+    .related-link{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      font-weight:750;
+    }
+
+    .related-link:last-child{
+      border-bottom:0;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:38px 0;
+      background:#fff;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:25px;
+      align-items:center;
+    }
+
+    .footer-brand{
+      font-weight:800;
+      font-size:18px;
+    }
+
+    .footer-copy{
+      max-width:520px;
+      color:var(--muted);
+      font-size:14px;
+      text-align:right;
+    }
+
+    @media(max-width:850px){
+      .layout{
+        grid-template-columns:1fr;
+      }
+
+      .sidebar{
+        position:static;
+      }
+
+      .nav-links{
+        gap:13px;
+      }
+
+      article{
+        padding:30px;
+      }
+    }
+
+    @media(max-width:600px){
+      .wrap{
+        width:min(100% - 26px,1120px);
+      }
+
+      .nav{
+        min-height:68px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding:50px 0 38px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .hero-text{
+        font-size:16px;
+      }
+
+      article{
+        padding:24px 20px;
+        border-radius:18px;
+      }
+
+      article h2{
+        font-size:24px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-copy{
+        text-align:left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav-shell">
+    <div class="wrap nav">
+
+      <a class="logo" href="https://office365acknowledge.github.io/">
+        <span class="logo-mark">?</span>
+        <span>Helpcentre</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="https://office365acknowledge.github.io/#guides">Guides</a>
+        <a href="https://office365acknowledge.github.io/#quick-help">Quick Help</a>
+        <a href="https://office365acknowledge.github.io/#setup-path">Setup Path</a>
+        <a href="https://office365acknowledge.github.io/#guides">Browse Guides</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+
+      <div class="crumb">Guide 08 · Getting Started</div>
+
+      <h1>I Just Purchased Microsoft 365—Now What? Install, Reinstall, Activate & Sign In Step by Step</h1>
+
+      <p class="hero-text">
+        Just purchased Microsoft 365 and wondering what happens next? Follow this practical
+        step-by-step guide to connect your purchase to your account, install the applications,
+        activate your subscription, sign in, and handle a reinstall when necessary.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Microsoft 365</span>
+        <span class="tag">Install</span>
+        <span class="tag">Activation</span>
+        <span class="tag">Sign In</span>
+        <span class="tag">Reinstall</span>
+      </div>
+
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="wrap layout">
+
+      <article>
+
+        <h2>I Just Purchased Microsoft 365. What Should I Do First?</h2>
+
+        <p>
+          If you are thinking, <strong>“I just purchased Microsoft 365, how do I install it?”</strong>,
+          you are not alone. The first step is not usually to start downloading random installation
+          files. Instead, identify the Microsoft account connected with your purchase and make sure
+          you know which version or subscription you bought.
+        </p>
+
+        <p>
+          Microsoft 365 setup generally follows a straightforward path:
+          purchase, account sign-in, installation, activation, and then use of the applications.
+          Keeping these steps in order helps avoid common problems such as installing the wrong
+          product or signing in with a different account.
+        </p>
+
+        <div class="note">
+          <strong>Start with the account:</strong>
+          If your purchase is already associated with a Microsoft account, use that same account
+          during setup and activation. Switching accounts can make a valid purchase appear to be missing.
+        </div>
+
+        <h2>Step 1: Confirm Your Purchase and Microsoft Account</h2>
+
+        <p>
+          Before installing anything, check the purchase confirmation and identify the Microsoft
+          account used during checkout or redemption. This is especially important if you have
+          multiple email addresses or Microsoft accounts.
+        </p>
+
+        <p>
+          You may see people refer to this step as <strong>Microsoft 365 login my account</strong>,
+          <strong>Microsoft 365 sign in account</strong>, or simply <strong>Microsoft account sign in</strong>.
+          These searches generally point to the same basic task: access the account associated with
+          your Microsoft 365 purchase.
+        </p>
+
+        <ul>
+          <li>Check the email address used for the purchase.</li>
+          <li>Make sure you can sign in to that Microsoft account.</li>
+          <li>Keep your purchase confirmation available.</li>
+          <li>If you received a product key, keep it nearby.</li>
+        </ul>
+
+        <h2>Step 2: Redeem a Product Key if Your Purchase Includes One</h2>
+
+        <p>
+          Not every Microsoft 365 purchase requires you to manually enter a product key during
+          installation. Some purchases are already linked to an account. Others may provide a key
+          that needs to be redeemed before the subscription or product becomes available.
+        </p>
+
+        <p>
+          If you have a key, use the appropriate Microsoft redemption process and sign in with the
+          account you want associated with the purchase. This is sometimes described as
+          <strong>Microsoft 365 product key activation</strong> or <strong>activate Microsoft 365
+          with product key</strong>.
+        </p>
+
+        <p>
+          For a detailed walkthrough, see our
+          <a href="https://office365acknowledge.github.io/microsoft-365-setup-product-key.html">
+            Microsoft 365 setup product key guide
+          </a>.
+        </p>
+
+        <h2>Step 3: Install Microsoft 365 on Your Computer</h2>
+
+        <p>
+          Once your account and purchase are ready, locate the installation option associated with
+          your subscription. Download the installer and run it on your computer.
+        </p>
+
+        <ol class="steps">
+
+          <li>
+            <strong>Sign in to the account connected to your purchase.</strong>
+            Verify that the subscription or product you purchased is visible.
+          </li>
+
+          <li>
+            <strong>Select the install option.</strong>
+            Choose the available installation command for your Microsoft 365 subscription.
+          </li>
+
+          <li>
+            <strong>Download the installer.</strong>
+            Allow the installation package to download completely before opening it.
+          </li>
+
+          <li>
+            <strong>Run the installer.</strong>
+            Follow the on-screen instructions and allow the installation to complete.
+          </li>
+
+          <li>
+            <strong>Open an application.</strong>
+            Launch Word, Excel, PowerPoint, or another included application to continue setup.
+          </li>
+
+        </ol>
+
+        <p>
+          If you want instructions specifically for both operating systems, use our
+          <a href="https://office365acknowledge.github.io/install-microsoft-365-pc-or-mac.html">
+            Microsoft 365 PC or Mac installation guide
+          </a>.
+        </p>
+
+        <h2>Step 4: Sign In After Installation</h2>
+
+        <p>
+          Installation places the applications on your computer, but you may still need to sign in
+          before the subscription is fully activated. When an application asks you to sign in, use
+          the same Microsoft account connected to your purchase.
+        </p>
+
+        <p>
+          If you accidentally sign in with another account, the application may show an activation
+          problem or indicate that no eligible subscription is available. Sign out and verify the
+          account before assuming that the purchase itself is defective.
+        </p>
+
+        <h2>Step 5: Activate Your Microsoft 365 Subscription</h2>
+
+        <p>
+          Activation confirms that your installed applications can use the subscription associated
+          with your account. If you are asking, <strong>“How do I activate my Microsoft Office
+          subscription?”</strong>, the answer depends on how the product was purchased and linked.
+        </p>
+
+        <p>
+          For many Microsoft 365 purchases, activation is completed by signing in to the correct
+          Microsoft account after installation. If your purchase came with a product key, redemption
+          may be required first.
+        </p>
+
+        <p>
+          Avoid entering a product key repeatedly if it has already been redeemed. Once a key is
+          connected to an account, the account itself can become the important part of accessing
+          the purchase later.
+        </p>
+
+        <h2>What If You Need to Reinstall Microsoft 365?</h2>
+
+        <p>
+          Reinstallation can become necessary after replacing a computer, repairing a system,
+          removing a damaged installation, or troubleshooting application problems.
+        </p>
+
+        <p>
+          If you need to <strong>Reinstall Microsoft 365 already purchased</strong>, start with the
+          Microsoft account associated with your original purchase. You generally do not want to
+          purchase another subscription simply because the application is no longer installed on
+          your computer.
+        </p>
+
+        <p>
+          Our dedicated
+          <a href="https://office365acknowledge.github.io/reinstall-microsoft-365-already-purchased.html">
+            Reinstall Microsoft 365 already purchased guide
+          </a>
+          covers the process in more detail.
+        </p>
+
+        <h2>What If Microsoft 365 Was Already Installed?</h2>
+
+        <p>
+          If the applications are already on your computer, you may not need to perform a completely
+          new installation. Open an application and check which account is currently signed in.
+          A sign-in or activation issue can sometimes be related to the account rather than the
+          installation itself.
+        </p>
+
+        <p>
+          Also check whether an older or different edition is installed. Multiple installations or
+          leftover versions can sometimes make troubleshooting more complicated.
+        </p>
+
+        <h2>Common Problems After Purchasing Microsoft 365</h2>
+
+        <h3>The subscription does not appear</h3>
+
+        <p>
+          Confirm that you are signed in to the same Microsoft account used when purchasing or
+          redeeming the subscription. If you have several accounts, try to identify the exact
+          purchase account rather than creating another one.
+        </p>
+
+        <h3>The product key does not work</h3>
+
+        <p>
+          Carefully check the characters and make sure the key belongs to the product you purchased.
+          If the key was already redeemed, look for the purchase under the associated account instead
+          of attempting to redeem it again.
+        </p>
+
+        <h3>The application says activation is required</h3>
+
+        <p>
+          Open the account section inside the application and verify the signed-in account.
+          A valid subscription connected to another account will not necessarily activate an
+          installation signed in under the wrong account.
+        </p>
+
+        <h3>You purchased a different product</h3>
+
+        <p>
+          Microsoft 365 subscriptions and one-time Office purchases are not the same type of product.
+          If you purchased a one-time edition such as Home & Student, follow the setup process for
+          that product rather than assuming that every installation screen is identical.
+        </p>
+
+        <p>
+          For a Home & Student installation, see our
+          <a href="https://office365acknowledge.github.io/office-com-setup-home-student-2021-2024.html">
+            Home & Student 2021/2024 setup guide
+          </a>.
+        </p>
+
+        <h2>Quick Microsoft 365 Setup Checklist</h2>
+
+        <ul>
+          <li>Confirm what Microsoft 365 product or subscription you purchased.</li>
+          <li>Identify the Microsoft account connected to the purchase.</li>
+          <li>Locate your product key if one was supplied.</li>
+          <li>Redeem the key if the purchase requires redemption.</li>
+          <li>Sign in to your account before downloading.</li>
+          <li>Download and install Microsoft 365.</li>
+          <li>Open an included application.</li>
+          <li>Sign in with the correct account.</li>
+          <li>Complete activation.</li>
+          <li>Keep your account details available if you need to reinstall later.</li>
+        </ul>
+
+        <h2>Need More Help With Installation or Activation?</h2>
+
+        <p>
+          If the main issue is a product key, read the
+          <a href="https://office365acknowledge.github.io/microsoft-office-product-key-stuck.html">
+            Microsoft Office product key troubleshooting guide
+          </a>.
+          If you need a broader walkthrough covering installation, activation, and sign-in,
+          see our
+          <a href="https://office365acknowledge.github.io/install-microsoft-365-already-purchased.html">
+            Install Microsoft 365 already purchased guide
+          </a>.
+        </p>
+
+        <p>
+          You can also return to the
+          <a href="https://office365acknowledge.github.io/">
+            main Helpcentre guides
+          </a>
+          to choose another setup topic.
+        </p>
+
+        <p>
+          The most important thing to remember after a new purchase is that your account,
+          subscription, installation, and activation should all point to the same product.
+          Once those pieces are connected correctly, getting started is usually much simpler.
+        </p>
+
+      </article>
+
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+          <h3>On This Page</h3>
+
+          <ul>
+            <li><a href="#top">First steps</a></li>
+            <li><a href="#top">Account sign-in</a></li>
+            <li><a href="#top">Product key</a></li>
+            <li><a href="#top">Installation</a></li>
+            <li><a href="#top">Activation</a></li>
+            <li><a href="#top">Reinstallation</a></li>
+            <li><a href="#top">Troubleshooting</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+
+          <h3>Related Guides</h3>
+
+          <a class="related-link"
+             href="https://office365acknowledge.github.io/install-microsoft-365-already-purchased.html">
+            Install Microsoft 365 Already Purchased
+          </a>
+
+          <a class="related-link"
+             href="https://office365acknowledge.github.io/microsoft-365-setup-product-key.html">
+            Microsoft 365 Setup Product Key
+          </a>
+
+          <a class="related-link"
+             href="https://office365acknowledge.github.io/reinstall-microsoft-365-already-purchased.html">
+            Reinstall Microsoft 365
+          </a>
+
+          <a class="related-link"
+             href="https://office365acknowledge.github.io/install-microsoft-365-pc-or-mac.html">
+            PC or Mac Installation
+          </a>
+
+        </div>
+
+        <div class="related">
+
+          <h3>Quick Setup Path</h3>
+
+          <p>
+            Purchase → Account → Product Key → Download → Install → Sign In → Activate
+          </p>
+
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+
+    <div class="wrap footer-inner">
+
+      <div class="footer-brand">
+        Helpcentre
+      </div>
+
+      <div class="footer-copy">
+        Independent setup guides written to make software setup easier to follow.
+        © 2026
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
