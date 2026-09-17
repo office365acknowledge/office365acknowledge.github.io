@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://office365acknowledge.github.io/sitemap.xml
